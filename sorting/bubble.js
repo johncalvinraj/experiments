@@ -1,16 +1,25 @@
 var a = [1,2,3,45,2,6,5,234,9,784,245]
-for (var i = 0; i <= a.length; i++) {
-  var c = 1
-  for (var j = 0; j <= a.length-i; j++) {
-    var d = a[j]
-    if (a[j+1] < a[j]){
-      c = 0
-      a[j] = a[j+1];
-      a[j+1] = d;
+
+/**
+ * Sort an array in place using bubble sort.
+ */
+function sort(arr) {
+  for (var i = 0; i <= arr.length; i++) {
+    var isSwapped = false
+    for (var j = 0; j <= arr.length-i; j++) {
+      var d = arr[j]
+      if (arr[j+1] < arr[j]){
+        isSwapped = true
+        arr[j] = arr[j+1];
+        arr[j+1] = d;
+      }
+    }
+    if (!isSwapped){
+      return arr
     }
   }
-  if(c === 1){
-    console.log(a)
-    break;
-  }
 }
+
+
+console.log(sort(a))
+
