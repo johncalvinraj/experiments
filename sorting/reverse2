@@ -1,0 +1,11 @@
+function reverse2 (num) {
+  j = num.length
+  for (var i =0; i <= Math.floor(num.length/2)/*Math.floor is neccesary for odd numbers */; i++){
+    j--
+    //swapping
+    var b = num[i]
+    num[i] = num[j]
+    num[j] = b
+  }
+  return num
+}
