@@ -1,6 +1,6 @@
 function reverse2 (num) {
   j = num.length
-  for (var i =0; i <= Math.floor(num.length/2)/*Math.floor is neccesary for odd numbers */; i++){
+  for (var i =0; i < num.length/2/*Math.floor is neccesary for odd numbers */; i++){
     j--
     //swapping
     var b = num[i]
@@ -9,3 +9,4 @@ function reverse2 (num) {
   }
   return num
 }
+console.log(reverse2([10,5,213,54,13,5]))
