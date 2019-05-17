@@ -9,20 +9,12 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.fillStyle = "#000000";
-var a=30
-var g = 0
-for(var i = 0;i <=8;i++){
-  for(var j =0;j < 4;j++){
-    ctx.fillRect(a,g,30,30)
-    a += 60
+var j = 30
+for(var i = 0;i <=240;i = i+ 30){
+  for(;j < 270;j = j+60){
+    ctx.fillRect(j,i,30,30)
   }
-  if(a === 270){
-    a = 0
-  }
-  else {
-    a = 30
-  }
-  g = g+30
+  j == 270 ? j = 0:j = 30
 }
 </script>
 
