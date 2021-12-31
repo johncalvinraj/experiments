@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel = "stylesheet" type="text/css" href = "plotter.css">
+    <title>Plottr!</title>
+  </head>
+  <body>
+    <div class = 'total'>
+      <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+      <h1 id = 'title'> Plottr!</h1>
+      <small><i>(Only 1 variable equations using x are supported)</i></small>
+      <h3 id = 'add'>+ &nbsp;&nbsp;&nbsp; Add equation.</h3>
+      <h3 id = 'subtract'>- &nbsp;&nbsp;&nbsp; Remove equation.</h3>
+      <div id = 'container'>
+        <input type = 'text' id = 'equation' placeholder = 'Type your equation here.' class = 'input'>
+        <input type = 'color' id = 'i0'>
+        <small>Choose color (for equation)</small>
+      </div>
+      <br>
+      <button onclick = "plot()">Plot</button>
+      <br>
+      <br>
+      <br>
+      <div id = 'canvas'>
+        <canvas id="myCanvas" width="1500" height="1500" style="border: 1px solid #d3d3d3;"></canvas>
+      </div>
+    </div>  
+    <script src = "plotter.js"></script>  
+  </body>
+</html>
+

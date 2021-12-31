@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <canvas id="myCanvas" width="1200" height="800" style="border:1px solid #d3d3d3;">
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      let x = 600,
+          y = 400,
+          z = 100;
+      ctx.beginPath();
+      ctx.arc(x, y, z, 0, 2 * Math.PI);
+      ctx.stroke();
+      var n = 24
+      for (var i = 0; i < n; i++) {
+        let angle = (2/n)*i*Math.PI;
+        ctx.beginPath();
+        ctx.moveTo(x+z*Math.sin(angle),y+z*Math.cos(angle))
+        ctx.lineTo(x,y);
+        ctx.stroke();
+      }
+
+
+      ctx.fillStyle = 'orange'
+      ctx.fillRect(1,1,1199,800/3);
+      ctx.fillStyle = 'green'
+      ctx.fillRect(1,800/3*2,1199,800/3);
+    </script> 
+
+  </body>
+</html>

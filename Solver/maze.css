@@ -1,0 +1,25 @@
+.table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table, td, th {  
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 480px;
+  height: 480px;
+}
+
+th, td {
+  padding: 15px;
+}
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 48px
+}
+small {
+  font-size: 24px
+}

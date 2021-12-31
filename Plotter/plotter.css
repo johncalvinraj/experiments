@@ -1,0 +1,12 @@
+#title {
+  text-align: center;
+  color: #179eff;
+}
+
+.total, .input{
+  font-family: 'PT Sans', sans-serif;
+}
+
+#canvas {
+  text-align: center;
+}
