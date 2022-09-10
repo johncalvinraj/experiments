@@ -7,7 +7,9 @@ function f(x) {
 function gss(f, a, b, tol = 1e-5){
     c = b - (b - a) / gr
     d = a + (b - a) / gr
+    i = 1
     while (Math.abs(b - a) > tol){
+        console.log(`i = ${i}, lower = ${a}, upper = ${b}`)
         if (f(c) > f(d)) {
             b = d
         }
@@ -16,7 +18,7 @@ function gss(f, a, b, tol = 1e-5){
         }
         c = b - (b - a) / gr
         d = a + (b - a) / gr
-        console.log(`lower = ${a}, upper = ${b}`)
+        i++
     }
     return (b + a) / 2
 } 
